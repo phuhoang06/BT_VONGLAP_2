@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function inHinhTraiTim() {
+    let size = 6; // Kích thước của trái tim
+
+    // Vẽ phần trên của trái tim
+    for (let i = size / 2; i < size; i += 2) {
+      document.write('&nbsp;&nbsp;'.repeat(size - i) + '*'.repeat(i) + '&nbsp;'.repeat(size - i) + '*'.repeat(i) + "<br>");
+    }
+
+    // Vẽ phần dưới của trái tim
+    for (let i = size; i >= 0; i--) {
+      document.write('&nbsp;&nbsp;'.repeat(size - i) + '*'.repeat(i * 2 + 1) + "<br>");
+    }
+  }
+
+  inHinhTraiTim();
+</script>
+</body>
+</html>

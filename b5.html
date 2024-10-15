@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+<input type="number" id="sotienvay" placeholder="Nhập số tiền vay ban đầu" >
+<input type="number" id="lai" placeholder="Nhập lãi suất hàng tháng (%): " >
+<input type="number" id="thang" placeholder="Số Tháng">
+<input type="button" value="Tính" onclick="tinhlai()">
+<p id="demo"></p>
+<script>
+  function tinhlai(){
+    let sotienvay = +document.getElementById("sotienvay").value;
+    let lai = +document.getElementById("lai").value
+    let thang = +document.getElementById("thang").value;
+    lai = lai/100;
+    for (let i = 1; i <= thang; i++){
+      sotienvay = sotienvay*(1+lai)
+    }
+    let ketqua = sotienvay.toFixed(2); // Làm tròn 2 chữ số sau dấu phẩy
+    document.getElementById("demo").innerHTML = "<p>Số tiền sau " + thang + " tháng là: " + ketqua + "</p>";
+
+  }
+
+</script>
+</body>
+</html>

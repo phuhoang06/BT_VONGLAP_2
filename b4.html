@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>In Hình Chữ Nhật Rỗng</title>
+</head>
+<body>
+<script>
+  function printHollowRectangle(rows, cols) {
+    let result = ""; // Khởi tạo chuỗi kết quả
+
+    // Vòng lặp qua các hàng
+    for (let i = 1; i <= rows; i++) {
+      if (i === 1 || i === rows) {
+        // In hàng đầu tiên và cuối cùng (toàn dấu sao)
+        result += '*'.repeat(cols) + '<br>';
+      } else {
+        // In các hàng giữa, với dấu sao ở hai bên và khoảng trống ở giữa
+        result += '*' + '&nbsp;&nbsp;'.repeat(cols - 2) + '*' + '<br>';
+      }
+    }
+    document.write(result); // In ra trên trang web
+  }
+
+  // Gọi hàm với số hàng (rows) và số cột (cols)
+  printHollowRectangle(5, 10); // Thay đổi giá trị để in hình chữ nhật với kích thước khác
+</script>
+</body>
+</html>

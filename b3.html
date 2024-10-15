@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hinh tam giac</title>
+</head>
+<body>
+<script>
+  function printTriangle1(n) {
+    let result = "";
+    for (let i = 1; i <= n; i++) {
+      result += '*'.repeat(i) + '<br>';
+    }
+    document.write(result);
+  }
+
+  printTriangle1(5);
+
+  function printTriangle3(n) {
+    let result = "";
+    for (let i = n; i >= 1; i--) {
+      result += '*'.repeat(i) + '<br>';
+    }
+    document.write(result);
+  }
+
+  printTriangle3(5);
+  function printTriangleBottomRight(n) {
+    let result = "";
+    for (let i = 1; i <= n; i++) {
+
+      result += '&nbsp;&nbsp;'.repeat(n - i) + '*'.repeat(i) + '<br>';
+    }
+    document.write(result);
+  }
+
+  printTriangleBottomRight(5);
+  function printTriangleBottomRight1(n) {
+    let result = "";
+    for (let i = n; i >= 1; i--) {
+
+      result += '&nbsp;&nbsp;'.repeat(n - i) + '*'.repeat(i) + '<br>';
+    }
+    document.write(result);
+  }
+
+  printTriangleBottomRight1(5);
+
+  </script>
+</body>
+</html>

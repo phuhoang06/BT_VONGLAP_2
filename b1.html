@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function fibolasi(n){
+    let a = 0;
+    let b = 1;
+    let count = 2
+    while (count < n) {
+      next = a + b;
+      document.write(next +'<br>');
+      a = b
+      b = next
+      count++;
+    }
+
+  }
+  fibolasi(20);
+</script>
+
+</body>
+</html>
